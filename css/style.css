@@ -13,6 +13,10 @@
     font-family: 'font3';
 }
 
+@font-face{
+    src: url('/fonts/LEonardo-Demo-Bold.otf');
+    font-family: 'font4';
+}
 *{
     margin: 0;
     padding: 0;
@@ -32,21 +36,42 @@ body{
 
 .titulo{
     top: 5%;
-    width: 100%;
+    max-width: 100%;
     position: absolute;
-    font-family: font2;
+    font-family: font1;
     text-transform: uppercase;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: 12%;
     font-weight: bold;
-    font-size: 100px;
+    font-size: 60px;
     z-index: 3;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 217, 1);
+    filter: blur(0px);
+    z-index: 5;
+
+}
+
+#titulo-g{
+    font-size: 20px;
+    color: rgb(95, 94, 88);
+    z-index: 2;
+
+}
+
+#titulo-sub{
+    font-size: 100px;
+    position: relative;
+    top: -180px;
+    left: -100px;
+    filter: blur(0px);
+    color: rgba(2, 2, 2, 0.042);
+    z-index: -2;
+    font-family: Montserrat;
+    font-weight: bold;
 }
 
 .p{
     font-size: 30px;
+    max-width: 100%;
     z-index: 4;
     position: relative;
     color: rgb(0, 0, 0);
@@ -66,7 +91,7 @@ body{
     object-fit: cover;
     object-position: 0px 0px;
     z-index: 1;
-    filter: blur(6px);
+    filter: blur(0px) grayscale();
 }
 
 #degrade-slide{
@@ -80,8 +105,10 @@ body{
 }
 
 .cab{
-    width: 100%;
-    height: 50px;
+    max-width: 100%;
+    min-width: 100%;
+    height: 40px;
+    max-height: 40px;
     background-color: rgb(245, 245, 245);
     box-shadow: rgba(100, 100, 100, 0.412) 0px 1px 6px;
     position: relative;
@@ -89,14 +116,23 @@ body{
 
 #cab-menu{
     display: flex;
-    margin-inline-start: 0px;
     position: relative;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+.align-menu{
+    display: flex;
+    background-color: transparent;
+    position: relative;
+    margin-right: 0%;
 }
 
 #cab-el{
     color: black;
     overflow: hidden;
-    margin-left: 15px;
+    margin-right: 10px;
     text-decoration: none;
     margin-top: 16px;
     position: relative;
@@ -105,9 +141,12 @@ body{
 
 #logo{
     position: relative;
-    max-width: 40%;
-    max-height: 40%;
     overflow: hidden;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #logo-titulo{
@@ -116,27 +155,27 @@ body{
     object-fit: none;
     height: 100%;
     z-index: 5;
-    bottom: 100%;
+    bottom: 120%;
     margin-right: auto;
     margin-left: auto;
     overflow: hidden;
 }
 
 #icos-1{
-    background-image: url('/img/mulher.webp');
-    background-position: 430px -14px;
-    background-size: 221px;
+    background-image: url('/img/criança.png');
+    background-position: 330px -3px;
+    background-size: 111px;
 }
 #icos-2{
-    background-image: url('/img/homem.png');
-    background-position: 433px -7px;
-    background-size: 220px;
+    background-image: url('/img/criança.png');
+    background-position: 330px -3px;
+    background-size: 111px;
 
 }
 #icos-3{
     background-image: url('/img/criança.png');
-    background-position: 420px -3px;
-    background-size: 211px;
+    background-position: 330px -3px;
+    background-size: 111px;
     
 }
 
@@ -144,9 +183,13 @@ body{
     border: 1px solid transparent;
     border-radius: 50%;
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     margin-left: 20px;
+    filter: saturate(40) hue-rotate(197deg);
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
@@ -162,14 +205,20 @@ body{
     position: relative;
     background-color: transparent;
     display: flex;
+    padding-bottom: 40px;
+    box-shadow: rgb(153, 153, 153) 0px 6px 5px;
 }
 
 .quad{
     position: relative;
+    margin-top: 3%;
     display: flex;
     background-color: transparent;
     margin-left: auto;
     margin-right: auto;
+    width: 90%;
+    height: 100%;
+    text-align: center;
 }
 
 .qual{
@@ -190,20 +239,32 @@ body{
     height: 40px;
 }
 @media only screen and (max-width: 600px) {
+    .circle-icos{
+        border: 1px solid transparent;
+        border-radius: 50%;
+        position: relative;
+        width: 70px;
+        height: 70px;
+        margin-left: 20px;
+        filter: saturate(40) hue-rotate(197deg);
+    }
 
-    .titulo{
-        text-align: center;
-        max-width: 100%;
-        top: 0%;
-        right: 20%;
-        position: absolute;
-        font-family: Arial;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 100px;
-        z-index: 3;
-        color: rgb(201, 150, 82);
-    }    
+    #icos-1{
+        background-image: url('/img/criança.png');
+        background-position: 447px -1px;
+        background-size: 75px;
+    }
+    #icos-2{
+        background-image: url('/img/criança.png');
+        background-position: 447px -1px;
+        background-size: 75px;
     
+    }
+    #icos-3{
+        background-image: url('/img/criança.png');
+        background-position: 447px -1px;
+        background-size: 75px;
+        
+    }
 
   }
