@@ -26,7 +26,7 @@ body{
     max-width: 100%;
     height: 100%;
     background-color: #fff;
-}
+    }
 
 .slides{
     background-color: transparent;
@@ -35,7 +35,7 @@ body{
 }
 
 .titulo{
-    top: 5%;
+    top: 10%;
     max-width: 100%;
     position: absolute;
     font-family: font1;
@@ -57,30 +57,12 @@ body{
 
 }
 
-#titulo-sub{
-    font-size: 100px;
-    position: relative;
-    top: -180px;
-    left: -100px;
-    filter: blur(0px);
-    color: rgba(2, 2, 2, 0.042);
-    z-index: -2;
-    font-family: Montserrat;
-    font-weight: bold;
+#st2{
+    color: rgb(43, 43, 43);
+    font-size: 90px;
+
 }
 
-.p{
-    font-size: 30px;
-    max-width: 100%;
-    z-index: 4;
-    position: relative;
-    color: rgb(0, 0, 0);
-    font-family: font2;
-    top: -120%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
 
 #img-slide{
     position: relative;
@@ -100,19 +82,28 @@ body{
     z-index: 3;
     width: 100%;
     height: 500px;
-    border-bottom: 10px solid rgb(252, 248, 6);
+    border-bottom: 10px solid rgba(121, 121, 121, 0.296);
     box-shadow: rgb(238, 238, 238) 0px 1px 2px;
+    animation: borderanime 25s ease infinite;
 }
-
+@keyframes borderanime{
+    0%{border-bottom: 10px solid rgba(255, 251, 0, 0.871);}
+    25%{border-bottom: 10px solid rgba(255, 247, 0, 0.96);}
+    50%{border-bottom: 10px solid rgba(255, 247, 0, 0.734);}
+    75%{border-bottom: 10px solid rgba(251, 255, 6, 0.296);}
+    100%{border-bottom: 10px solid rgba(255, 230, 0, 0.693);}
+}
 .cab{
     max-width: 100%;
     min-width: 100%;
-    height: 40px;
-    max-height: 40px;
+    height: 60px;
+    max-height: 60px;
     background-color: rgb(245, 245, 245);
     box-shadow: rgba(100, 100, 100, 0.412) 0px 1px 6px;
     position: relative;
 }
+
+
 
 #cab-menu{
     display: flex;
@@ -126,7 +117,7 @@ body{
     display: flex;
     background-color: transparent;
     position: relative;
-    margin-right: 0%;
+    margin-left: 20px;
 }
 
 #cab-el{
@@ -134,7 +125,7 @@ body{
     overflow: hidden;
     margin-right: 10px;
     text-decoration: none;
-    margin-top: 16px;
+    margin-top: 23px;
     position: relative;
     font-family: font1;
 }
@@ -152,10 +143,9 @@ body{
 #logo-titulo{
     position: relative;
     width: 100%;
-    object-fit: none;
+    object-fit: cover;
     height: 100%;
     z-index: 5;
-    bottom: 120%;
     margin-right: auto;
     margin-left: auto;
     overflow: hidden;
@@ -200,13 +190,14 @@ body{
 }
 
 .align-ico{
-    width: 100%;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
     height: 100%;
     position: relative;
     background-color: transparent;
     display: flex;
     padding-bottom: 40px;
-    box-shadow: rgb(153, 153, 153) 0px 6px 5px;
 }
 
 .quad{
@@ -238,6 +229,97 @@ body{
     width: 100%;
     height: 40px;
 }
+
+.prod{
+    width: 100%;
+    height: 1000px;
+    border-top: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.categorias{
+    position: relative;
+    width: 15%;
+    height: 100%;
+    border: 1px transparent solid;
+}
+
+.produtos{
+    width: 84.8%;
+    height: 100%;
+    border: solid transparent 1px;
+    position: relative;
+    bottom: 100.2%;
+    background-color: rgb(237, 237, 237);
+    margin-left: auto;
+}
+
+.pr{
+    min-width: 280px;
+    height: 400px;
+    background-color: rgb(247, 247, 247);
+    box-shadow: rgb(213, 213, 213) 0px 0px 13px;
+    margin: 30px;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.align-prod{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#comprar-p{
+    width: 100%;
+    height: 15%;
+    position: relative;
+    top: 85%;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgba(99, 197, 0, 0.905);
+}
+
+#comprar-p > p{
+    position: absolute;
+    color: #fff;
+    font-family: font1;
+    font-weight: bold;
+    width: 100%;
+    top: 30%;
+    text-transform: uppercase;
+}
+
+.parte-cima{
+    width: 100%;
+    position: relative;
+    height: fit-content;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.cat-li{
+    overflow: hidden;
+}
+
+#n{
+    font-weight: lighter;
+}
+
+#b{
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 600px) {
     .circle-icos{
         border: 1px solid transparent;
