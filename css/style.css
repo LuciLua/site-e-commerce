@@ -244,14 +244,9 @@ body{
 
 .prod{
     width: 100%;
-<<<<<<< HEAD
-    height: fit-content;
-    border-top: 1px solid black;
-=======
     height: 100%;
     border-top: 1px solid rgb(199, 199, 199);
     box-shadow: rgba(106, 106, 106, 0.645) 5px 0px 10px;
->>>>>>> temp
     margin-left: auto;
     margin-right: auto;
 }
@@ -261,7 +256,6 @@ body{
     background-color: rgb(242, 242, 242);
     width: 18.2%;
     height: 100%;
-    display:block;
     border: 1px transparent solid;
 }
 
@@ -270,11 +264,7 @@ body{
     height: 100%;
     border: solid transparent 1px;
     position: relative;
-<<<<<<< HEAD
-    background-color: rgb(194, 47, 47);
-=======
     background-color: rgb(237, 237, 237);
->>>>>>> temp
     margin-left: auto;
 }
 
@@ -386,8 +376,6 @@ text-transform: uppercase;
         background-size: 75px;
         
     }
-<<<<<<< HEAD
-=======
 
     .pr{
         min-width: 200px;
@@ -402,5 +390,4 @@ text-transform: uppercase;
     }
 
 
->>>>>>> temp
   }
