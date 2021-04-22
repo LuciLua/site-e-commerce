@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap');
+
 @font-face{
     src: url('/fonts/font.woff2');
     font-family: 'font1';
@@ -20,105 +22,85 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
     max-width: 100%;
+    width: 100%;
     height: 100%;
-    background-image: url('https://images4.alphacoders.com/431/thumb-1920-43134.jpg');
+    background-image: url('https://media.istockphoto.com/vectors/vector-black-white-and-grey-seashells-repeat-pattern-suitable-for-vector-id1277458413');
+    background-repeat: repeat;
+    background-color: #fff;
+    background-position: center;
+    background-size: 100vh;
     background-attachment:fixed;
     }
 
 .slides{
-    background-color: transparent;
-    height: 500px;
-    max-width: 100%;
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .titulo{
-    top: 10%;
-    max-width: 100%;
     position: absolute;
     font-family: font1;
     text-transform: uppercase;
     margin-left: 12%;
-    font-weight: bold;
-    font-size: 60px;
+    font-weight: 100;
+    font-size: 3rem;
     z-index: 3;
-    color: rgb(255, 217, 1);
-    filter: blur(0px);
+    color: rgb(0, 0, 0);
     z-index: 5;
-
 }
 
 #titulo-g{
-    font-size: 20px;
-    color: rgb(95, 94, 88);
+    font-size: 2rem;
+    color: rgb(227, 227, 227);
     z-index: 2;
-
+    text-transform: lowercase;
 }
-
-#st2{
-    color: rgb(43, 43, 43);
-    font-size: 90px;
-
-}
-
 
 #img-slide{
     position: relative;
-    max-height: 100%;
-    min-height: 100%;
+    min-height: 100vh;
+    height: 100vh;
     width: 100%;
-    min-width: 100%;
     object-fit: cover;
-    object-position: 0px 0px;
     z-index: 1;
-    filter: blur(0px) grayscale();
+    filter: grayscale(1);
 }
 
 #degrade-slide{
-    position: absolute;
-    top: 0%;
+    position: relative;
     z-index: 3;
-    width: 100%;
-    height: 500px;
-    border-bottom: 10px solid rgba(121, 121, 121, 0.296);
-    box-shadow: rgb(238, 238, 238) 0px 1px 2px;
     animation: borderanime 25s ease infinite;
 }
 @keyframes borderanime{
-    0%{border-bottom: 10px solid rgba(255, 251, 0, 0.871);}
+    0%{border-bottom: 10px solid rgba(255, 132, 0, 0.871);}
     25%{border-bottom: 10px solid rgba(255, 247, 0, 0.96);}
-    50%{border-bottom: 10px solid rgba(255, 247, 0, 0.734);}
+    50%{border-bottom: 10px solid rgba(0, 255, 72, 0.734);}
     75%{border-bottom: 10px solid rgba(251, 255, 6, 0.296);}
     100%{border-bottom: 10px solid rgba(255, 230, 0, 0.693);}
 }
 .cab{
-    max-width: 100%;
-    min-width: 100%;
-    height: 60px;
-    max-height: 60px;
-    background-color: rgb(245, 245, 245);
-    box-shadow: rgba(199, 199, 199, 0.412) 0px 1px 2px;
     position: relative;
+    height: 4rem;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    box-shadow: rgba(0, 0, 0, 0.412) 0px 1px 10px;
 }
 
-
-
-#cab-menu{
+#cab-ul{
     display: flex;
+    align-items: center;
     position: relative;
-    background-color: transparent;
+    background: transparent;
     width: 100%;
     height: 100%;
-}
-
-.align-menu{
-    display: flex;
-    background-color: transparent;
-    position: relative;
-    margin-left: 20px;
+    list-style: none;
 }
 
 #cab-el{
@@ -126,74 +108,31 @@ body{
     overflow: hidden;
     margin-right: 10px;
     text-decoration: none;
-    margin-top: 23px;
     position: relative;
     font-family: font1;
+    margin-left: 1.5rem;
 }
 
-#logo{
-    position: relative;
-    overflow: hidden;
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-left: 5px;
-    margin-right: 5px;
-}
 
-#logo-titulo{
-    position: relative;
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
-    z-index: 5;
-    margin-right: auto;
-    margin-left: auto;
-    overflow: hidden;
-}
-
-#icos-1{
-    background-image: url('/img/criança.png');
-    background-position: 330px -3px;
-    background-size: 111px;
-}
-#icos-2{
-    background-image: url('/img/criança.png');
-    background-position: 330px -3px;
-    background-size: 111px;
-
-}
-#icos-3{
-    background-image: url('/img/criança.png');
-    background-position: 330px -3px;
-    background-size: 111px;
-    
-}
-
-.circle-icos{
-    border: 1px solid transparent;
-    border-radius: 50%;
-    position: relative;
-    width: 100px;
-    height: 100px;
-    margin-left: 20px;
-    filter: saturate(40) hue-rotate(175deg) brightness(1) opacity(60%);
+.qual{
+    margin-top: 55px;
+    margin-bottom: 40px;
     text-align: center;
-    margin-right: auto;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
     margin-left: auto;
-}
+    margin-right: auto;
+    color: rgb(21, 21, 21);
+    font-family: font3;
+    font-size: 3rem;
+    text-shadow: rgba(0, 0, 0, 0.207) 0 0 3px;
+    background: #fff;
 
-
-.perfil{
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
 }
 
 .align-ico{
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     height: 100%;
     position: relative;
     background-color: transparent;
@@ -203,50 +142,45 @@ body{
 
 .quad{
     position: relative;
-    margin-top: 3%;
+    
     display: flex;
-    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 80%;
+    height: 100%;
+
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
-    height: 100%;
+}
+
+#icos-1, #icos-2, #icos-3{
+    background-image: url('/img/criança.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.circle-icos{
+    backdrop-filter: blur(5px);
+    border: 1px solid transparent;
+    border-radius: 50%;
+    position: relative;
+    width: 20vh;
+    height: 20vh;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.qual{
-    margin-top: 70px;
-    margin-bottom: 40px;
-    text-align: center;
-    position: relative;
+.inter{
     width: 100%;
     height: 100%;
-    color: rgb(56, 56, 56);
-    font-family: font3;
-    text-shadow: rgba(0, 0, 0, 0.207) 0 0 3px;
-}
-
-.end-1{
-    width: 100%;
-    height: 40px;
-    position: relative;
-    z-index: 4;
-    background-color: #fff;
-}
-
-.end-2{
-    background-color: rgb(248, 248, 248);
-    box-shadow: rgb(221, 221, 221) 5px 0px 5px;
-    width: 100%;
-    z-index: 5;
-    position: relative;
-    height: 200px;
-}
-
-.prod{
-    width: 100%;
-    height: 100%;
-    border-top: 1px solid rgb(199, 199, 199);
-    box-shadow: rgba(106, 106, 106, 0.645) 5px 0px 10px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -254,13 +188,13 @@ body{
 .categorias{
     position: absolute;
     background-color: rgb(242, 242, 242);
-    width: 18.2%;
+    width: 20%;
     height: 100%;
     border: 1px transparent solid;
 }
 
 .produtos{
-    width: 80.8%;
+    width: 80%;
     height: 100%;
     border: solid transparent 1px;
     position: relative;
@@ -318,7 +252,7 @@ body{
 font-family: font1;
 text-align: center;
 position: relative;
-font-size: 40px;
+font-size: 1.2rem;
 text-transform: uppercase;
 }
 
@@ -341,44 +275,10 @@ text-transform: uppercase;
     padding: 2px;
 }
 
-
-
-
-
-
-
-
 @media only screen and (max-width: 600px) {
-    .circle-icos{
-        border: 1px solid transparent;
-        border-radius: 50%;
-        position: relative;
-        width: 70px;
-        height: 70px;
-        margin-left: 20px;
-        filter: saturate(40) hue-rotate(197deg);
-    }
-
-    #icos-1{
-        background-image: url('/img/criança.png');
-        background-position: 447px -1px;
-        background-size: 75px;
-    }
-    #icos-2{
-        background-image: url('/img/criança.png');
-        background-position: 447px -1px;
-        background-size: 75px;
-    
-    }
-    #icos-3{
-        background-image: url('/img/criança.png');
-        background-position: 447px -1px;
-        background-size: 75px;
-        
-    }
 
     .pr{
-        min-width: 200px;
+        min-width: 280px;
     }
 
     .categorias{
