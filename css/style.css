@@ -115,16 +115,10 @@ body{
     margin-left: auto;
     margin-right: auto;
     color: rgb(21, 21, 21);
-    font-family: font3;
+    font-family: Lexend;
     font-size: 3rem;
-    text-shadow: rgba(0, 0, 0, 0.207) 0 0 3px;
     background: #fff;
 }
-
-.title::first-line{
-    color: rgb(0, 102, 255);
-}
-
 
 .inter{
     width: 100%;
@@ -136,21 +130,27 @@ body{
 .categories{
     position: relative;
     background-color: rgb(242, 242, 242);
-    width: 220px;
-    min-width: 220px!important;
+    width: 260px;
+    min-width: 260px!important;
     height: 100vh;
-    border: 1px transparent solid;
-    margin-left: 10px;
     z-index: 20;
+    border-radius: 0.785px;
+
 }
 
 .products{
-    height: 100%;
+    height: 100vh;
     max-width: 100%;
-    border: solid transparent 1px;
     position: relative;
     background-color: rgb(237, 237, 237);
-    margin: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 0.785px;
+    overflow-y: scroll;
+}
+
+.products::-webkit-scrollbar{
+    display: none;
 }
 
 .pr{
@@ -171,7 +171,7 @@ body{
     height: 100%;
 }
 
-#comprar-p{
+.buy{
     width: 100%;
     height: 15%;
     position: relative;
@@ -181,7 +181,7 @@ body{
     background-color: rgba(99, 197, 0, 0.905);
 }
 
-#comprar-p p{
+.buy p{
     position: absolute;
     color: #fff;
     font-family: font1;
@@ -189,6 +189,7 @@ body{
     width: 100%;
     top: 30%;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 #n{
