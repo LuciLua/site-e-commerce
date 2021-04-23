@@ -29,9 +29,7 @@ body{
     max-width: 100%;
     width: 100%;
     height: 100%;
-    background-image: url('https://media.istockphoto.com/vectors/vector-black-white-and-grey-seashells-repeat-pattern-suitable-for-vector-id1277458413');
-    background-repeat: repeat;
-    background-color: #fff;
+    background-color: rgb(232, 232, 232);
     background-position: center;
     background-size: 100vh;
     background-attachment:fixed;
@@ -76,16 +74,9 @@ body{
 #degrade-slide{
     position: relative;
     z-index: 3;
-    animation: borderanime 25s ease infinite;
 }
-@keyframes borderanime{
-    0%{border-bottom: 10px solid rgba(255, 132, 0, 0.871);}
-    25%{border-bottom: 10px solid rgba(255, 247, 0, 0.96);}
-    50%{border-bottom: 10px solid rgba(0, 255, 72, 0.734);}
-    75%{border-bottom: 10px solid rgba(251, 255, 6, 0.296);}
-    100%{border-bottom: 10px solid rgba(255, 230, 0, 0.693);}
-}
-.cab{
+
+.h{
     position: relative;
     height: 4rem;
     width: 100%;
@@ -93,7 +84,7 @@ body{
     box-shadow: rgba(0, 0, 0, 0.412) 0px 1px 10px;
 }
 
-#cab-ul{
+.h .h-ul{
     display: flex;
     align-items: center;
     position: relative;
@@ -103,7 +94,7 @@ body{
     list-style: none;
 }
 
-#cab-el{
+.h .h-ul .li-l, .li-l a{
     color: black;
     overflow: hidden;
     margin-right: 10px;
@@ -114,7 +105,7 @@ body{
 }
 
 
-.qual{
+.title{
     margin-top: 55px;
     margin-bottom: 40px;
     text-align: center;
@@ -128,78 +119,38 @@ body{
     font-size: 3rem;
     text-shadow: rgba(0, 0, 0, 0.207) 0 0 3px;
     background: #fff;
-
 }
 
-.align-ico{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-color: transparent;
-    display: flex;
-    padding-bottom: 40px;
+.title::first-line{
+    color: rgb(0, 102, 255);
 }
 
-.quad{
-    position: relative;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    width: 80%;
-    height: 100%;
-
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#icos-1, #icos-2, #icos-3{
-    background-image: url('/img/criança.png');
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    margin-left: 10px;
-}
-
-.circle-icos{
-    backdrop-filter: blur(5px);
-    border: 1px solid transparent;
-    border-radius: 50%;
-    position: relative;
-    width: 20vh;
-    height: 20vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .inter{
     width: 100%;
     height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
+   display: flex;
 }
 
-.categorias{
-    position: absolute;
+.categories{
+    position: relative;
     background-color: rgb(242, 242, 242);
-    width: 20%;
-    height: 100%;
+    width: 220px;
+    min-width: 220px!important;
+    height: 100vh;
     border: 1px transparent solid;
+    margin-left: 10px;
+    z-index: 20;
 }
 
-.produtos{
-    width: 80%;
+.products{
     height: 100%;
+    max-width: 100%;
     border: solid transparent 1px;
     position: relative;
     background-color: rgb(237, 237, 237);
-    margin-left: auto;
+    margin: 10px;
 }
 
 .pr{
@@ -230,7 +181,7 @@ body{
     background-color: rgba(99, 197, 0, 0.905);
 }
 
-#comprar-p > p{
+#comprar-p p{
     position: absolute;
     color: #fff;
     font-family: font1;
@@ -238,31 +189,6 @@ body{
     width: 100%;
     top: 30%;
     text-transform: uppercase;
-}
-
-.parte-cima{
-    width: 100%;
-    position: relative;
-    height: fit-content;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-#cat-txt{
-font-family: font1;
-text-align: center;
-position: relative;
-font-size: 1.2rem;
-text-transform: uppercase;
-}
-
-.cat-li{
-    overflow: hidden;
-    color: rgb(48, 48, 48);
-    font-family: monospace;
-    text-transform: uppercase;
-    width: 96%;
-    position: relative;
 }
 
 #n{
@@ -285,7 +211,7 @@ text-transform: uppercase;
         display: none;
     }
 
-    .produtos{
+    .products{
         min-width: 100%;
     }
 
