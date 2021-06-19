@@ -6,6 +6,20 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+    background-color: rgba(121, 121, 121, 0.159);
+    
+    border-radius: 40px;
+    
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(60, 60, 60, 0.371);
+
+    border-radius: 40px;
+}
+
 body{
     max-width: 100%;
     width: 100%;
@@ -62,12 +76,16 @@ body{
 .menu{
     display: flex;
     
-    position: relative;
+    position: fixed;
     
-    height: 4rem;
+    top: 0;
+
+    height: 5rem;
     width: 100%;
     
-    background-color: rgb(232, 232, 232);
+    background-color: rgba(232, 232, 232, 0.596);
+
+    z-index: 1000;
 }
 
 .menu ul{
@@ -97,7 +115,7 @@ body{
 
     padding-left: 20px;
     padding-right: 20px;
-    
+
     margin: 2px;
 }
 
@@ -126,111 +144,123 @@ body{
     height: 40%;
 }
 
-.menu .menu-ul{
+.menu .ul-l{
     margin-right: auto;
 }
 
-.menu .menu-ul-r{
+.menu .ul-r{
     margin-left: auto;
 }
 
 /* ---------- */
 
-.title{
-    margin-top: 55px;
-    margin-bottom: 40px;
-    text-align: center;
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    color: rgb(21, 21, 21);
-    font-family: Lexend;
-    font-size: 3rem;
-    background: #fff;
-}
-
 .inter{
     width: 100%;
-    height: 100%;
+    height: fit-content;
+
+    padding: 1px;
+
     justify-content: center;
-   display: flex;
+
+    display: flex;
+
+    background-color: rgb(255, 255, 255);
 }
 
 .categories{
     position: relative;
-    background-color: rgb(242, 242, 242);
-    width: 260px;
-    min-width: 260px!important;
-    height: 100vh;
-    z-index: 20;
-    border-radius: 0.785px;
 
+    background-color: rgb(242, 242, 242);
+    
+    width: 250px;
+    max-width: 250px;
+    min-width: 250px;
+
+    height: fit-content;
+    min-height: 100vh;
+
+    z-index: 20;
+
+    border-radius: 3px;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 
 .products{
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     max-width: 100%;
+    min-width: 300px;
+
     position: relative;
+
     background-color: rgb(237, 237, 237);
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 0.785px;
-    overflow-y: scroll;
+
+    border-radius: 3px;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 
-.products::-webkit-scrollbar{
-    display: none;
-}
-
-.pr{
-    min-width: 280px;
-    height: 400px;
-    background-color: rgb(247, 247, 247);
-    box-shadow: rgb(213, 213, 213) 0px 0px 13px;
-    margin: 30px;
-    position: relative;
-    display: inline-block;
-    border-radius: 5px;
-}
-
-.align-prod{
+.products .align-prod{
     text-align: center;
+
     position: relative;
+
     width: 100%;
     height: 100%;
 }
 
-.buy{
-    width: 100%;
-    height: 15%;
+.products .align-prod .pr{
+    min-width: 260px;
+    width: 260px;
+    height: 400px;
+
+    background-color: rgba(247, 247, 247, 0.152);
+    box-shadow: rgba(174, 174, 174, 0.152) 0px 0px 13px;
+
+    margin: 30px;
+
     position: relative;
-    top: 85%;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    background-color: rgba(99, 197, 0, 0.905);
+
+    display: inline-block;
+
+    border-radius: 5px;
+
+    overflow: hidden;
 }
 
-.buy p{
-    position: absolute;
-    color: #fff;
-    font-family: font1;
-    font-weight: bold;
+.products .align-prod .pr .buy{
     width: 100%;
-    top: 30%;
-    text-transform: uppercase;
+    height: 15%;
+
+    position: absolute;
+
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(16, 197, 0, 0.905);
+
     cursor: pointer;
 }
 
-#n{
-    font-weight: lighter;
-    padding: 2px;
+.products .align-prod .pr .buy:hover{
+    background-color: rgba(17, 153, 4, 0.905);
 }
 
-#b{
-    font-weight: bold;
-    padding: 2px;
+.products .align-prod .pr .buy p{
+    position: absolute;
+    
+    color: #fff;
+
+    font-family: Lexend;
+
+    width: 100%;
+
+    text-transform: uppercase;
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -239,7 +269,7 @@ body{
         min-width: 280px;
     }
 
-    .categorias{
+    .categories{
         display: none;
     }
 
