@@ -154,23 +154,83 @@ body{
 
 /* ---------- */
 
+.search{
+    width: 100%;
+    height: 60px;
+
+    background-color: rgb(232, 232, 232);
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.search input{
+    color: rgb(106, 106, 106);
+
+    height: 80%;
+    width: 40%;
+
+    border-radius: 40px;
+
+    border: none;
+
+    padding: 20px;
+
+    font-family: Lexend;
+
+    outline: none;
+
+    position: relative;
+
+    margin-left: auto;
+    margin-right: 20px;
+
+    background-color: rgba(232, 232, 232, 0.596);
+
+    box-shadow: inset 1px 5px 7px rgb(211, 211, 211),
+    -2px 5px 8px rgba(243, 243, 243, 0.83);
+}
+
+.search img{
+
+    margin-right: 20px;
+    
+    position: absolute;
+    
+    right: 2%;
+    
+    height: 35%;
+    
+    filter: opacity(0.3);
+    
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.search img:hover{
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+
+
 .inter{
     width: 100%;
     height: fit-content;
 
-    padding: 1px;
+    padding: 20px;
 
     justify-content: center;
 
     display: flex;
-
-    background-color: rgb(255, 255, 255);
 }
 
 .categories{
     position: relative;
 
-    background-color: rgb(242, 242, 242);
+    background-color: rgba(243, 243, 243, 0.596);
     
     width: 250px;
     max-width: 250px;
@@ -181,9 +241,14 @@ body{
 
     z-index: 20;
 
-    border-radius: 3px;
-    margin-left: 1px;
-    margin-right: 1px;
+    border-radius: 5px;
+
+    margin-left: 3px;
+    margin-right: 3px;
+
+    box-shadow: -1px 0px 5px rgba(213, 213, 213, 0.844),
+    0px -1px 1px inset rgba(201, 201, 201, 0.5),
+    -1px -1px 1px rgba(255, 255, 255, 0.207);
 }
 
 .products{
@@ -194,11 +259,16 @@ body{
 
     position: relative;
 
-    background-color: rgb(237, 237, 237);
+    background-color: rgba(237, 237, 237, 0.152);
 
-    border-radius: 3px;
-    margin-left: 1px;
-    margin-right: 1px;
+    border-radius: 5px;
+
+    margin-left: 3px;
+    margin-right: 3px;
+
+    box-shadow: -1px 0px 5px rgba(213, 213, 213, 0.844),
+    0px -1px 1px inset rgba(201, 201, 201, 0.5),
+    -1px -1px 1px rgba(255, 255, 255, 0.207);
 }
 
 .products .align-prod{
@@ -208,6 +278,11 @@ body{
 
     width: 100%;
     height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .products .align-prod .pr{
@@ -215,14 +290,15 @@ body{
     width: 260px;
     height: 400px;
 
-    background-color: rgba(247, 247, 247, 0.152);
+    background-color: rgba(247, 247, 247, 0.056);
     box-shadow: rgba(174, 174, 174, 0.152) 0px 0px 13px;
 
     margin: 30px;
 
     position: relative;
 
-    display: inline-block;
+    display: flex;
+    justify-content: center;
 
     border-radius: 5px;
 
@@ -230,24 +306,58 @@ body{
 }
 
 .products .align-prod .pr .buy{
-    width: 100%;
-    height: 15%;
+    width: 60%;
+    height: 12%;
 
     position: absolute;
 
-    bottom: 0;
+    bottom: 15%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(16, 197, 0, 0.905);
+    background-color: rgba(0, 0, 0, 0.905);
+
+    border-radius: 40px;
+
+    cursor: pointer;
+}
+.products .align-prod .pr .carrinho{
+    width: 60%;
+    height: 12%;
+
+    position: absolute;
+
+    color: black;
+
+    bottom: 3%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 40px;
 
     cursor: pointer;
 }
 
+
+.products .align-prod .pr .carrinho p{
+    position: absolute;
+    
+    color: rgb(0, 0, 0);
+
+    font-family: Lexend;
+
+    width: 100%;
+
+    font-size: 14px;
+
+}
+
 .products .align-prod .pr .buy:hover{
-    background-color: rgba(17, 153, 4, 0.905);
+    background-color: rgba(36, 36, 36, 0.905);
 }
 
 .products .align-prod .pr .buy p{
@@ -259,7 +369,7 @@ body{
 
     width: 100%;
 
-    text-transform: uppercase;
+    font-size: 14px;
 
 }
 
