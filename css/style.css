@@ -60,64 +60,81 @@ body{
 }
 
 .menu{
+    display: flex;
+    
     position: relative;
-
+    
     height: 4rem;
     width: 100%;
-
+    
     background-color: rgb(232, 232, 232);
 }
 
-.menu .menu-ul{
+.menu ul{
     display: flex;
     align-items: center;
-    
+
     position: relative;
     background: transparent;
 
-    width: 100%;
+    width: fit-content;
     height: 100%;
     
     list-style: none;
 }
 
-.menu .menu-ul li{
-    margin-right: 20px;
+.menu ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     position: relative;
 
     font-family: Lexend;
 
-    font-size: 0.9rem;
+    width:  fit-content;
+    height: 100%;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    margin: 2px;
 }
 
-.menu .menu-ul li a{
+.menu ul li a{
     text-decoration: none;
 
     color: black;
-}
 
-.menu .menu-ul li a:hover{
-    color: rgb(75, 75, 75);
-}
-
-.menu .menu-ul .li-l, .li-l a{
-    width: fit-content;
-
-    margin-left: 20px;
-}
-
-.menu .menu-ul .li-r{
+    position: relative;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
-    width: fit-content;
+    height: 100%;
+    width: 100%;
+}
 
+.menu ul li a:hover{
+    color: rgb(109, 109, 109);
+}
+
+.menu ul li a img{
+    position: relative;
+
+    height: 40%;
+}
+
+.menu .menu-ul{
+    margin-right: auto;
+}
+
+.menu .menu-ul-r{
     margin-left: auto;
 }
 
+/* ---------- */
 
 .title{
     margin-top: 55px;
