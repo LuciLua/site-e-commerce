@@ -117,6 +117,8 @@ body{
     padding-right: 30px;
 
     margin: 2px;
+
+    cursor: pointer;
 }
 
 .menu .ul-l li:first-of-type{
@@ -147,7 +149,7 @@ body{
     color: rgb(109, 109, 109);
 }
 
-.menu ul li a img{
+.menu ul li img{
     position: relative;
 
     height: 30%;
@@ -155,10 +157,30 @@ body{
 
 .menu .ul-l{
     margin-right: auto;
+    transition: 0.6s;
+    animation: fade 1s linear;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+        top: 10;
+    }
+    100%{
+        opacity: 100%;
+        top: 0;
+    }
 }
 
 .menu .ul-r{
     margin-left: auto;
+}
+
+.menu .ul-l .li-l-x{
+    display: none;
+    transition: 0.6s;
+    animation: fade 1s linear;
+
 }
 
 /* ---------- */
