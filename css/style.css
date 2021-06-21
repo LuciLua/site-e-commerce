@@ -173,6 +173,7 @@ body{
 }
 
 .menu .ul-l{
+    margin-left: 10px;
     margin-right: auto;
 
     position: relative;
@@ -196,6 +197,10 @@ body{
     padding-right: 20px;
 }
 
+.menu .ul-l li:first-of-type{
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
 
     .menu .ul-l .li-l-x{
@@ -213,6 +218,18 @@ body{
 
     .ul-l .li-l, .li-l-m{
         background-color: #fff;
+    }
+
+    .ul-l .li-l a, .li-l-m a{
+        color: rgb(170, 170, 170);
+    }
+    .ul-l .li-l:hover a, .li-l-m:hover a{
+        color: rgb(0, 0, 0);
+    }
+
+
+    .ul-l .li-l:hover, .li-l-m:hover{
+        background-color: rgb(250, 250, 250);
     }
 
     /* ICON MENU ENCOLHIDO */
