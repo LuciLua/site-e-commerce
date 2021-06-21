@@ -83,7 +83,9 @@ body{
     height: 5rem;
     width: 100%;
     
-    background-color: rgba(232, 232, 232, 0.733);
+    background-color: rgba(232, 232, 232, 0.803);
+
+    backdrop-filter: blur(4px);
 
     z-index: 1000;
 }
@@ -137,8 +139,7 @@ body{
 }
 
 .menu .ul-l li:first-of-type{
-    margin-left: 10px;
-    transition: 0.3s;
+    display: none;
 }
 .menu .ul-l li:first-of-type:hover{
     transform: scale(1.1);
@@ -175,14 +176,20 @@ body{
 
 .menu .ul-l .li-l{   
     animation: fade 0.3s linear;
+
 }
 
 .menu .ul-l{
     margin-right: auto;
+    position: relative;
+    z-index: 10;
 }
 
 .menu .ul-r{
     margin-left: auto;
+    z-index: 9;
+    position: relative;
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -191,21 +198,13 @@ body{
         height: 100vh;
         width: 100%;
         position: absolute;
-
     }
 
-    .ul-l .li-l:first-of-type{
-        background-color: #fff;
-    }
-
-    .ul-l .li-l{
+    .ul-l .li-l, .li-l-m{
         background-color: #fff;
     }
     .menul-x .li-l-m{
         background-color: transparent;
-    }
-    .li-l-m{
-        background-color: #fff;
     }
 
     .menul-x:first-of-type{
@@ -222,6 +221,19 @@ body{
     }
 
     .menu .ul-l li{
+        width: 100%;
+        margin: 0;
+        display: block;
+    }
+    .menu .ul-l li{
+        width: 100%;
+        margin: 0;
+    }
+    .menu .ul-l li:first-of-type{
+        display: flex;
+    }
+
+    .menul-x .ul-l li{
         width: 100%;
         margin: 0;
     }
