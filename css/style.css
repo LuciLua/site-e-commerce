@@ -61,7 +61,7 @@ body{
 
     margin-left: 12%;
 
-    font-weight: 100;
+    font-weight: 800;
     font-size: 3rem;
 
     color: rgb(34, 34, 34);
@@ -73,8 +73,10 @@ body{
 
 .init .titulo #titulo-g{
     font-size: 1rem;
+    font-weight: 100;
+
     
-    color: rgb(89, 89, 89);
+    color: rgb(177, 177, 177);
     z-index: 2;
 
     text-transform: uppercase;
@@ -124,8 +126,8 @@ body{
     width:  fit-content;
     height: 100%;
 
-    padding-left: 6%;
-    padding-right: 6%;
+    padding-left: 10%;
+    padding-right: 10%;
 
     margin: 2px;
 
