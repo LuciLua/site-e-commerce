@@ -45,6 +45,15 @@ body{
     z-index: 1;
 }
 
+.init .back img{
+    filter: grayscale() opacity(0.05);
+
+    position: absolute;
+
+    right: 0;
+    margin-left: auto;
+}
+
 .init .titulo{
     position: absolute;
 
@@ -80,12 +89,12 @@ body{
     
     top: 0;
 
-    height: 5rem;
+    height: 4rem;
     width: 100%;
     
-    background-color: rgba(232, 232, 232, 0.803);
+    background-color: rgba(232, 232, 232, 0.631);
 
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
 
     z-index: 1000;
 }
