@@ -124,8 +124,8 @@ body{
     width:  fit-content;
     height: 100%;
 
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 6%;
+    padding-right: 6%;
 
     margin: 2px;
 
@@ -199,6 +199,54 @@ body{
 
     right: 0;
 
+}
+
+.menu .ul-r #carrinho::before{
+    content: '2';
+    position: absolute;
+
+    top: 35px;
+    left: 12px;
+
+    font-size: 10px;
+
+    background-color: rgb(226, 44, 44);
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    z-index: 3;
+}
+
+.menu .ul-r #user::before{
+    content: '5';
+    position: absolute;
+
+    top: 35px;
+    left: 12px;
+
+    font-size: 10px;
+
+    background-color: rgb(226, 44, 44);
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    z-index: 3;
 }
 
 .menu .ul-r li{
