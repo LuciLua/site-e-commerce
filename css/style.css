@@ -222,6 +222,8 @@ body{
         height: 100vh;
         width: 100%;
 
+        margin: 0;
+
         position: absolute;
     }
 
@@ -230,17 +232,12 @@ body{
     }
 
     .ul-l .li-l a, .li-l-m a{
-        color: rgb(170, 170, 170);
+        color: rgb(28, 28, 28);
     }
     .ul-l .li-l:hover a, .li-l-m:hover a{
         color: rgb(0, 0, 0);
     }
-
-
-    .ul-l .li-l:hover, .li-l-m:hover{
-        background-color: rgb(250, 250, 250);
-    }
-
+    
     /* ICON MENU ENCOLHIDO */
     .menu .menul-x .li-l-m{ 
         background-color: transparent;
