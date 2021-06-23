@@ -52,6 +52,9 @@ body{
 
     right: 0;
     margin-left: auto;
+
+    user-select: none;
+    pointer-events: none;
 }
 
 .init .titulo{
