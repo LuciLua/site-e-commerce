@@ -414,11 +414,11 @@ body{
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
     justify-content: center;
 
     position: relative;
-
 }
 
 .cat-search select{
@@ -428,11 +428,22 @@ body{
 
     background-color: transparent;
     margin: auto;
+    
+    width: 95%;
+    max-width: 95%;
 
-    border-bottom: 2px solid black;
+    outline: none;
+    user-select: none;
 
 }
 
+.cat-search select option, .cat-search select optgroup{
+    font-family: Lexend;
+    color: rgb(106, 106, 106);
+
+    outline: none;
+    user-select: none;
+}
 
 .inter{
     width: 100%;
