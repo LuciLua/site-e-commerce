@@ -4,5 +4,5 @@ const menu = ()=>{
         menu[i].classList.toggle('li-l-x')
     }
     var menul = document.querySelector('.ul-l')
-    menul.classList.toggle('menul-x')
+    menul.classList.toggle('ul-l-x')
 }

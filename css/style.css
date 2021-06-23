@@ -289,13 +289,13 @@ body{
     }
     
     /* ICON MENU ENCOLHIDO */
-    .menu .menul-x .li-l-m{ 
+    .menu .ul-l-x .li-l-m{ 
         background-color: transparent;
         margin-left: 30px;
     }
 
     /* ICON MENU  */
-    .menu .menul-x:first-of-type {
+    .menu .ul-l-x:first-of-type {
         display: flex;
 
         background-color: transparent;
@@ -322,7 +322,7 @@ body{
         display: flex;
     }
 
-    .menu .menul-x .ul-l li{
+    .menu .ul-l-x .ul-l li{
         width: 100%;
         margin: 0;
     }
@@ -342,6 +342,8 @@ body{
     align-items: center;
 
     position: relative;
+
+    z-index: 7;
 }
 
 .search input{
@@ -443,6 +445,7 @@ body{
 
     outline: none;
     user-select: none;
+
 }
 
 .inter{
