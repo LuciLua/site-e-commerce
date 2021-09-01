@@ -208,7 +208,7 @@ body{
 }
 
 .menu .ul-r #carrinho::before{
-    content: '2';
+    content: attr(data-before);
     position: absolute;
 
     top: 35px;

@@ -20,3 +20,17 @@ function myFunction() {
       text.style.display = "none";
     }
   }
+  
+  function test(event){
+    let qt = 0
+    qt = qt + (Math.random() * 10).toFixed()
+    // qt += ++qt
+    this.style.border='solid 1px #ff0000'
+    var carrinhoQt = document.getElementById('carrinho')
+    carrinhoQt.setAttribute('data-before', qt)
+    // carrinhoQt.before.content= qt
+  }
+  
+  let itens = document.querySelectorAll('.carrinho')
+  itens.forEach(item => 
+  item.addEventListener("click", test))
