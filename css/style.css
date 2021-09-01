@@ -178,7 +178,8 @@ body{
 .menu ul li img{
     position: relative;
 
-    height: 30%;
+    height: 20px;
+    width: 20px;
 }
 
 .menu .ul-l .li-l{   
