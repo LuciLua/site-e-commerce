@@ -201,9 +201,10 @@ body{
 
     z-index: 9;
 
-    position: fixed;
+    position: absolute;
 
     right: 0;
+    top: 0;
 
 }
 
