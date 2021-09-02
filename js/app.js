@@ -21,16 +21,17 @@ function myFunction() {
     }
   }
   
-  function test(event){
+  function test(){
     let qt = 0
     qt = qt + (Math.random() * 10).toFixed()
     // qt += ++qt
-    this.style.border='solid 1px #ff0000'
+    // this.style.opacity='30%'
+    this.classList.toggle('carrinhoX')
     var carrinhoQt = document.getElementById('carrinho')
     carrinhoQt.setAttribute('data-before', qt)
     // carrinhoQt.before.content= qt
   }
   
-  let itens = document.querySelectorAll('.carrinho')
+  let itens = document.querySelectorAll('.carrinhoNow')
   itens.forEach(item => 
   item.addEventListener("click", test))

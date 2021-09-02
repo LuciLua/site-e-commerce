@@ -682,8 +682,6 @@ body{
 
     position: absolute;
 
-    color: black;
-
     bottom: 3%;
 
     display: flex;
@@ -691,24 +689,36 @@ body{
     align-items: center;
 
     border-radius: 40px;
-
+    
     cursor: pointer;
-
+    
+    
     z-index: 2;
 }
 
-
-.products .align-prod .pr .carrinho p{
+.products .align-prod .pr .carrinho .carrinhoNow{
     position: absolute;
+    
+    border-radius: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     color: rgb(0, 0, 0);
 
     font-family: Lexend;
 
+
+    height: 100%;
     width: 100%;
 
     font-size: 14px;
+}
 
+.products .align-prod .pr .carrinho .carrinhoX{
+    color: rgba(0, 0, 0, 0.296);
+    
 }
 
 .products .align-prod .pr .buy:hover{
