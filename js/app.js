@@ -21,17 +21,24 @@ function myFunction() {
     }
   }
   
-  function test(){
-    let qt = 0
-    qt = qt + (Math.random() * 10).toFixed()
-    // qt += ++qt
-    // this.style.opacity='30%'
+  function paraCarrinho(){ // bug
     this.classList.toggle('carrinhoX')
+    let itemCarrinho = document.querySelectorAll('.carrinhoX')
+    if(itemCarrinho.length > 0){
+      itemCarrinho.forEach(e => e.textContent='No carrinho')
+      qt++
+    } else {
+      this.textContent='adicionar no carrinho'
+      qt--
+    }
+
+    
     var carrinhoQt = document.getElementById('carrinho')
     carrinhoQt.setAttribute('data-before', qt)
-    // carrinhoQt.before.content= qt
   }
   
   let itens = document.querySelectorAll('.carrinhoNow')
+  
+  var qt = 0
   itens.forEach(item => 
-  item.addEventListener("click", test))
+  item.addEventListener("click", paraCarrinho))

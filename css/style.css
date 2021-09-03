@@ -714,11 +714,12 @@ body{
     width: 100%;
 
     font-size: 14px;
+    user-select: none;
 }
 
 .products .align-prod .pr .carrinho .carrinhoX{
     color: rgba(0, 0, 0, 0.296);
-    
+    user-select: none;
 }
 
 .products .align-prod .pr .buy:hover{
