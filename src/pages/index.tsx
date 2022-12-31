@@ -10,22 +10,6 @@ function Home() {
                     <p id="titulo-g">Geladinho e saboroso</p>
                 </h1>
             </div>
-            <div className="menu">
-                <ul className="ul-l">
-                    <li className="li-l-m" onClick={() => "menu()"}><img src="img/list.svg" alt="" /></li>
-                    <li className="li-l"><a href="index.html">Início</a></li>
-                    <li className="li-l"><a href="about.html">Sobre</a></li>
-                    <li className="li-l"><a href="index.html">Sorvetes</a></li>
-                    <li className="li-l"><a href="index.html">Contato</a></li>
-                </ul>
-                <ul className="ul-r">
-                    <li className="li-r" id="carrinho"><a href="index.html">
-                        <img src="img/basket.svg" alt="" /></a></li>
-                    <li className="li-r" id="user"><a href="index.html"><img src="img/person-circle.svg" alt="" /></a></li>
-                </ul>
-            </div>
-
-
             <div className="search">
                 <div className="cat-search">
                     <select name="cars" id="cars">
