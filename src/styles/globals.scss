@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap');
-
-*::before, *, *::after{
+*::before,
+*,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+// temp
 
 ::-webkit-scrollbar{
     background-color: rgba(121, 121, 121, 0.159);
@@ -46,7 +49,7 @@ body{
 }
 
 .init .back img{
-    filter: grayscale() opacity(0.05);
+    filter: grayscale(1) opacity(0.1);
 
     position: absolute;
 
@@ -87,56 +90,6 @@ body{
     line-height: 4;
 }
 
-.menu{
-    display: flex;
-    
-    position: fixed;
-    
-    top: 0;
-
-    height: 4rem;
-    width: 100%;
-    
-    background-color: rgba(232, 232, 232, 0.631);
-
-    backdrop-filter: blur(3px);
-
-    z-index: 1000;
-}
-
-.menu ul{
-    display: flex;
-    align-items: center;
-
-    position: relative;
-    background: transparent;
-
-    width: fit-content;
-    height: 100%;
-    
-    list-style: none;
-}
-
-.menu ul li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-
-    font-family: Lexend;
-
-    width:  fit-content;
-    height: 100%;
-
-    padding-left: 10%;
-    padding-right: 10%;
-
-    margin: 2px;
-
-    cursor: pointer;
-}
-
 @keyframes fade {
     0%{
         opacity: 0%;
@@ -152,187 +105,6 @@ body{
     }
 }
 
-.menu .ul-l li:first-of-type{
-    /* display: none; */
-}
-
-.menu ul li a{
-    text-decoration: none;
-
-    color: black;
-
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 100%;
-    width: 100%;
-}
-
-.menu ul li a:hover{
-    color: rgb(109, 109, 109);
-}
-
-.menu ul li img{
-    position: relative;
-
-    height: 20px;
-    width: 20px;
-}
-
-.menu .ul-l .li-l{   
-    animation: fade 0.3s linear;
-
-}
-
-.menu .ul-l{
-    margin-left: 10px;
-    margin-right: auto;
-
-    position: relative;
-
-    z-index: 10;
-}
-
-.menu .ul-r{
-    margin-left: auto;
-
-    z-index: 9;
-
-    position: absolute;
-
-    right: 0;
-    top: 0;
-
-}
-
-.menu .ul-r #carrinho::before{
-    content: attr(data-before);
-    position: absolute;
-
-    top: 35px;
-    left: 12px;
-
-    font-size: 10px;
-
-    background-color: rgb(226, 44, 44);
-    color: #fff;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    width: 13px;
-    height: 13px;
-
-    border-radius: 50%;
-
-    z-index: 3;
-}
-
-.menu .ul-r #user::before{
-    content: '5';
-    position: absolute;
-
-    top: 35px;
-    left: 12px;
-
-    font-size: 10px;
-
-    background-color: rgb(226, 44, 44);
-    color: #fff;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    width: 13px;
-    height: 13px;
-
-    border-radius: 50%;
-
-    z-index: 3;
-}
-
-.menu .ul-r li{
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.menu .ul-l li:first-of-type{
-    display: none;
-}
-
-@media only screen and (max-width: 600px) {
-
-    .menu .ul-l .li-l-x{
-        display: none;
-    }
-
-    .menu .ul-l{
-        flex-direction: column;
-
-        height: 100vh;
-        width: 100%;
-
-        margin: 0;
-
-        position: absolute;
-    }
-
-    .ul-l .li-l, .li-l-m{
-        background-color: #fff;
-    }
-
-    .ul-l .li-l a, .li-l-m a{
-        color: rgb(28, 28, 28);
-    }
-    .ul-l .li-l:hover a, .li-l-m:hover a{
-        color: rgb(0, 0, 0);
-    }
-    
-    /* ICON MENU ENCOLHIDO */
-    .menu .ul-l-x .li-l-m{ 
-        background-color: transparent;
-        margin-left: 30px;
-    }
-
-    /* ICON MENU  */
-    .menu .ul-l-x:first-of-type {
-        display: flex;
-
-        background-color: transparent;
-        
-        flex-direction: row;
-    
-        position: relative;
-        
-        width:  fit-content;
-        height: 100%;
-
-    }
-
-    .menu .ul-l li{
-        width: 100%;
-        margin: 0;
-        display: block;
-    }
-    .menu .ul-l li{
-        width: 100%;
-        margin: 0;
-    }
-    .menu .ul-l li:first-of-type{
-        display: flex;
-    }
-
-    .menu .ul-l-x .ul-l li{
-        width: 100%;
-        margin: 0;
-    }
-
-}
 
 
 /* ---------- */
