@@ -1,0 +1,114 @@
+
+.c_categories{
+    position: relative;
+
+    background-color: rgba(243, 243, 243, 0.727);
+    
+    width: 250px;
+    max-width: 250px;
+    min-width: 250px;
+
+    height: fit-content;
+    min-height: 100vh;
+
+    z-index: 20;
+
+    border-radius: 5px;
+
+    margin-left: 3px;
+    margin-right: 3px;
+
+    padding: 10px;
+
+    box-shadow: -1px 0px 5px rgba(213, 213, 213, 0.844),
+    0px -1px 1px inset rgba(201, 201, 201, 0.5),
+    -1px -1px 1px rgba(255, 255, 255, 0.207);
+}
+
+.c_categories .categories{
+    width: 100%;
+    height: fit-content;
+}
+
+.c_categories .categories .name{
+    padding: 20px;
+
+    border-bottom: 1px solid rgb(232, 232, 232);
+    background-color: rgba(243, 243, 243, 0.727);
+}
+
+.c_categories .categories .name h1{
+    color: rgb(31, 31, 31);
+
+    font-size: 16px;
+    font-family: Lexend;
+}
+
+.c_categories .categories .sub{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    z-index: 5;
+    position: relative;
+}
+
+.c_categories .categories .sub label{
+    padding: 10px;
+    border-bottom: 1px solid rgba(228, 228, 228, 0);
+
+    display: flex;
+    align-items: center;
+
+    user-select: none;
+}
+
+.c_categories .categories .sub label .stars{
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 5px;
+
+}
+
+
+.c_categories .categories .sub label .stars img{
+    margin: 2px;
+}
+
+.c_categories .categories .sub label::before{
+    content: "";
+
+    background-color: rgb(230, 230, 230);
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 60%;
+
+    overflow: hidden;
+    position: absolute;
+}
+
+.c_categories .categories .sub label input{
+    opacity: 0;
+
+    margin-right: 10px;
+
+
+    width: 15px;
+    height: 15px;
+
+    position: relative;
+}
+
+.c_categories .categories .sub label input:checked{
+    opacity: 100%;
+
+    width: 15px;
+    height: 15px;
+}
