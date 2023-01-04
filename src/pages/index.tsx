@@ -32,7 +32,7 @@ function Home() {
     
             <div className="inter">
 
-            <MenuCategories />
+            {/* <MenuCategories /> */}
 
                 <div className="products">
                     <div className="align-prod">

@@ -1,35 +1,42 @@
+import Link from "next/link"
+import { useEffect, useRef, useState } from "react"
 import styles from "./Header.module.scss"
 
 function Header() {
+
+    const menu_ul_l = useRef(null)
+    const [menuopen, setMenuopen] = useState(false)
+
+    useEffect(() => {
+        toggleMenu()
+    }, [])
+    
+    function toggleMenu() {
+        menuopen ? setMenuopen(false) : setMenuopen(true)
+        menuopen ? menu_ul_l.current.classList.add(styles.active) : menu_ul_l.current.classList.remove(styles.active)
+    }
+
     return (
         <div className={styles.c_menu}>
-            <ul className={styles.menu_ul_l}>
-                <li className="li-l-m" onClick={() => "menu()"}>
-                    <img src="img/list.svg" alt="" />
-                </li>
-                <li className="li-l">
-                    <a href="index.html">Início</a>
-                </li>
-                <li className="li-l">
-                    <a href="about.html">Sobre</a>
-                </li>
-                <li className="li-l">
-                    <a href="index.html">Sorvetes</a>
-                </li>
-                <li className="li-l">
-                    <a href="index.html">Contato</a>
-                </li>
+            <ul className={styles.menu_ul_l} ref={menu_ul_l}>
+                <li><Link onClick={() => toggleMenu()} href="/">Início</Link></li>
+                <li><Link onClick={() => toggleMenu()} href="/about">Sobre</Link></li>
+                <li><Link onClick={() => toggleMenu()} href="/sorvetes">Sorvetes</Link></li>
+                <li><Link onClick={() => toggleMenu()} href="/contact">Contato</Link></li>
             </ul>
             <ul className={styles.menu_ul_r}>
-                <li className={styles.menu_li_r} id="carrinho">
-                    <a href="index.html">
+                <li id="carrinho">
+                    <Link href="/">
                         <img src="img/basket.svg" alt="" />
-                    </a>
+                    </Link>
                 </li>
-                <li className={styles.menu_li_r} id="user">
-                    <a href="index.html">
+                <li id="user">
+                    <Link href="/">
                         <img src="img/person-circle.svg" alt="" />
-                    </a>
+                    </Link>
+                </li>
+                <li className={styles.li_l_m} onClick={() => toggleMenu()}>
+                    <img src="img/list.svg" alt="" />
                 </li>
             </ul>
         </div>
