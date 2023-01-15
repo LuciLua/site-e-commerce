@@ -1,4 +1,5 @@
 import MenuCategories from "../components/MenuCategories/MenuCategories"
+import SearchBar from "../components/SearchBar/SearchBar"
 
 function Home() {
     return (
@@ -13,26 +14,11 @@ function Home() {
                 </h1>
             </div>
 
-            <div className="search">
-                <div className="cat-search">
-                    <select name="cars" id="cars">
-                        <optgroup label="Comestiveis">
-                            <option value="volvo">Sorvetes</option>
-                            <option value="saab">Picolés</option>
-                        </optgroup>
-                        <optgroup label="Acessórios">
-                            <option value="mercedes">Potinhos</option>
-                            <option value="audi">Colheres especiais</option>
-                        </optgroup>
-                    </select>
-                </div>
-                <input type="text" placeholder="Procure por produtos" />
-                <img src="img/search.svg" alt="" />
-            </div>
-    
+            <SearchBar />
+
             <div className="inter">
 
-            {/* <MenuCategories /> */}
+                {/* <MenuCategories /> */}
 
                 <div className="products">
                     <div className="align-prod">
