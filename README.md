@@ -6,3 +6,9 @@
 - ReactJs
 - NextJs
 - Sass
+
+Backend
+- mongoDB
+- mySQL
+- axios
+
