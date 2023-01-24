@@ -1,65 +1,21 @@
 import MenuCategories from "../components/MenuCategories/MenuCategories"
 import SearchBar from "../components/SearchBar/SearchBar"
+import styles from "../styles/Home.module.scss"
 
 function Home() {
     return (
-        <main>
-            <div className="init">
-                <div className="back">
+        <>
+            <main className={styles.init}>
+                <div className={styles.background}>
                     <img src="img/sor.png" alt="" />
                 </div>
-                <h1 className="titulo">
-                    <p>SorveteStore<br />Compre já o seu!</p>
-                    <p id="titulo-g">Geladinho e saboroso</p>
-                </h1>
-            </div>
-
-            <SearchBar />
-
-            <div className="inter">
-
-                {/* <MenuCategories /> */}
-
-                <div className="products">
-                    <div className="align-prod">
-                        <div className="pr">
-                            <div className="buy" id="teste">
-                                <p>Comprar agora</p>
-                            </div>
-                            <img className="item" src="img/sor.png" alt="" />
-                            <div className="carrinho">
-                                <p className="carrinhoNow">colocar no carrinho</p>
-                            </div>
-                        </div>
-                        <div className="pr">
-                            <div className="buy">
-                                <p>Comprar agora</p>
-                            </div>
-                            <img className="item" src="img/icechoco.png" alt="" />
-                            <div className="carrinho">
-                                <p className="carrinhoNow">colocar no carrinho</p>
-                            </div>
-                        </div><div className="pr">
-                            <div className="buy">
-                                <p>Comprar agora</p>
-                            </div>
-                            <img className="item" src="img/sor.png" alt="" />
-                            <div className="carrinho">
-                                <p className="carrinhoNow">colocar no carrinho</p>
-                            </div>
-                        </div><div className="pr">
-                            <div className="buy">
-                                <p>Comprar agora</p>
-                            </div>
-                            <img className="item" src="img/sor.png" alt="" />
-                            <div className="carrinho">
-                                <p className="carrinhoNow">colocar no carrinho</p>
-                            </div>
-                        </div>
-                    </div>
+                <div className={styles.txtInit}>
+                    <h1 className={styles.title}>SorveteStore <br /> Compre já o seu!</h1>
+                    <h2 className={styles.subtitle}>Geladinho e saboroso</h2>
                 </div>
-            </div>
-        </main>
+            </main>
+            <SearchBar />
+        </>
     )
 }
 
