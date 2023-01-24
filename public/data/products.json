@@ -1,0 +1,74 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "picolé sabor chocolate",
+            "price": 10.00,
+            "stars": 5,
+            "img": "/img/sor.png"
+        },
+        {
+            "id": 2,
+            "name": "picolé normal",
+            "price": 6.00,
+            "stars": 2,
+            "img": "/img/icechoco.png"
+        },
+        {
+            "id": 3,
+            "name": "sorvete de nutella e limão",
+            "price": 20.00,
+            "stars": 1,
+            "img": "/img/sor.png"
+        },
+        {
+            "id": 4,
+            "name": "picolé de agua",
+            "price": 3.00,
+            "stars": 4,
+            "img": "/img/icechoco.png"
+        },
+        {
+            "id": 5,
+            "name": "picolé recheado de nutella e capa de ovomaltine",
+            "price": 22.50,
+            "stars": 4,
+            "img": "/img/icechoco.png"
+        },
+        {
+            "id": 6,
+            "name": "picolé com sorvete",
+            "price": 18.00,
+            "stars": 3,
+            "img": "/img/sor.png"
+        },
+        {
+            "id": 7,
+            "name": "picolé gourmet de morango",
+            "price": 15.00,
+            "stars": 2,
+            "img": "/img/sor.png"
+        },
+        {
+            "id": 8,
+            "name": "sorvete cremoso",
+            "price": 11.50,
+            "stars": 5,
+            "img": "/img/sor.png"
+        },
+        {
+            "id": 9,
+            "name": "sorvete sabor chocolate",
+            "price": 10.00,
+            "stars": 3,
+            "img": "/img/sor.png"
+        },
+        {
+            "id": 10,
+            "name": "sorvete gourmet de pizza",
+            "price": 15.00,
+            "stars": 2,
+            "img": "/img/icechoco.png"
+        }
+    ]
+}

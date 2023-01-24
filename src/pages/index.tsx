@@ -1,3 +1,4 @@
+import MainProducts from "../components/MainProducts/MainProducts"
 import MenuCategories from "../components/MenuCategories/MenuCategories"
 import SearchBar from "../components/SearchBar/SearchBar"
 import styles from "../styles/Home.module.scss"
@@ -15,6 +16,10 @@ function Home() {
                 </div>
             </main>
             <SearchBar />
+            <main className={styles.wrapMenuAndMainProducts}>
+                <MenuCategories />
+                <MainProducts />
+            </main>
         </>
     )
 }

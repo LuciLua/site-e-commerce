@@ -1,42 +1,43 @@
 .init {
     width: 100%;
     min-width: 100%;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - var(--headerHeight));
 
     display: flex;
     align-items: center;
 
     position: relative;
 
-    margin-top: 60px;
+    margin-top: var(--headerHeight);
     // border: 2px solid red;
 
     .txtInit {
         font-family: Lexend;
-        color: rgb(34, 34, 34);
         line-height: 1.5;
-        
+
         height: 100%;
         width: 100%;
 
-        margin-left: 5vw;
+        margin-left: 9vw;
         margin-bottom: 30vh;
-        
+
         display: flex;
         flex-direction: column;
-        
+
         z-index: 5;
 
         position: relative;
 
         h1.title {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
+            color: rgb(34, 34, 34);
         }
 
         h2.subtitle {
             font-size: 1.5em;
             font-weight: 200;
+            color: rgb(110, 110, 110);
 
         }
     }
@@ -65,4 +66,12 @@
             pointer-events: none;
         }
     }
+}
+
+.wrapMenuAndMainProducts{
+    display: flex;
+    position: relative;
+    padding: 10px;
+
+    gap: 15px;
 }
