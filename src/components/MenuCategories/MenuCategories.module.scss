@@ -1,7 +1,7 @@
 .c_categories {
     position: relative;
 
-    background-color: var(--primaryColor);
+    // background-color: var(--primaryColor);
 
     width: 250px;
     max-width: 250px;
@@ -16,8 +16,8 @@
 
     padding: 10px;
 
-    box-shadow: 0 0 10px inset #d8d8d890,
-     0 0 10px #12121225;
+    // box-shadow: 0 0 10px inset #d8d8d890,
+    //  0 0 10px #12121225;
 
     .categories {
         width: 100%;
@@ -31,7 +31,6 @@
             padding: 20px;
 
             border-bottom: 1px solid rgb(232, 232, 232);
-            background-color: var(--primaryColor);
 
             h1 {
                 color: rgb(31, 31, 31);

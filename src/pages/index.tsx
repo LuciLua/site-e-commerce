@@ -1,9 +1,19 @@
+import { useEffect, useState } from "react"
 import MainProducts from "../components/MainProducts/MainProducts"
 import MenuCategories from "../components/MenuCategories/MenuCategories"
+import ResultsFound from "../components/ResultsFound/ResultsFound"
 import SearchBar from "../components/SearchBar/SearchBar"
 import styles from "../styles/Home.module.scss"
 
 function Home() {
+
+    const [query, setQuery] = useState<string>("")
+    const [visibleResultsFound, setVisibleResultsFound] = useState<boolean>(false)
+
+    useEffect(() => {
+
+    }), []
+
     return (
         <>
             <main className={styles.init}>
@@ -15,7 +25,12 @@ function Home() {
                     <h2 className={styles.subtitle}>Geladinho e saboroso</h2>
                 </div>
             </main>
-            <SearchBar />
+            <SearchBar setQuery={setQuery} setVisibleResultsFound={setVisibleResultsFound} />
+
+            {visibleResultsFound ?
+                <ResultsFound query={query} setVisibleResultsFound={setVisibleResultsFound} />
+                : null}
+
             <main className={styles.wrapMenuAndMainProducts}>
                 <MenuCategories />
                 <MainProducts />

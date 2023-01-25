@@ -1,0 +1,36 @@
+.c_results{
+    width: 100%;
+    height: 50px;
+    background-color: #e8e8e8;
+
+    box-shadow: 0 0 6px #12121212;
+
+    margin: 3px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Lexend;
+
+    button{
+
+        position: absolute;
+        right: 10px;
+
+        border: none;
+        color: rgb(144, 144, 144);
+        border-radius: 60%;
+
+        background-color: transparent;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 20px;
+        height: 20px;
+
+        cursor: pointer;
+    }
+}

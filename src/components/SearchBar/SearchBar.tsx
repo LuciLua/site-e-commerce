@@ -1,8 +1,23 @@
+import { useEffect, useState } from "react"
 import styles from "./SearchBar.module.scss"
 
-function SearchBar() {
+function SearchBar({ setQuery, setVisibleResultsFound }) {
+
+
+    useEffect(() => {
+
+    }, [])
+
+    const [tempQuery, setTempQuery] = useState<string>("")
+
+    function sendToQuery() {
+        setQuery(tempQuery)
+        setVisibleResultsFound(true)
+    }
+
+
     return (
-        <div className={styles.search}>
+        <form className={styles.search}>
             <div className={styles.catsearch}>
                 <select name="cars" id="cars">
                     <optgroup label="Comestiveis">
@@ -15,9 +30,14 @@ function SearchBar() {
                     </optgroup>
                 </select>
             </div>
-            <input type="text" placeholder="Procure por produtos" />
+            <input
+                type="text"
+                placeholder="Procure por produtos"
+                onChange={(e) => { setTempQuery(e.target.value) }} />
+            <button type="submit" onClick={(e) => {e.preventDefault(); sendToQuery()}}>
             <img src="img/search.svg" alt="" />
-        </div>
+        </button>
+        </form >
     )
 }
 

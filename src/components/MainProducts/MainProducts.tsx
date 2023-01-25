@@ -23,20 +23,29 @@ function MainProducts() {
                     products.map(p => {
                         return (
                             <div className={styles.product}>
-                                <p className={styles.name}>
-                                    {p.name}
-                                </p>
                                 <div className={styles.c_img}>
-
                                     <img src={p.img} alt="" />
                                 </div>
-                                <div className={styles.stars}>
-                                    <Stars howManyStars={p.stars} />
+                                <div className={styles.c_info}>
+
+                                    <p className={styles.name}>
+                                        {p.name}
+                                    </p>
+                                    <div className={styles.stars}>
+                                        <Stars howManyStars={p.stars} />
+                                    </div>
+                                    <p className={styles.price}>
+                                        <span className={styles.cifrao}>R$</span>
+                                        <span className={styles.int}>
+                                            {(p.price).toFixed(0)}
+                                        </span>
+                                        <span className={styles.end}>
+                                            {(p.price).toFixed(2).slice(-2)}
+                                        </span>
+                                    </p>
                                 </div>
-                                <p className={styles.price}>
-                                    R${(p.price).toFixed(2).replace('.', ',')}
-                                </p>
-                            </div>)
+                            </div>
+                        )
                     })
                 }
             </div>
