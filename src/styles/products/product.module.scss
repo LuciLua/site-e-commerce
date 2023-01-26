@@ -1,0 +1,17 @@
+.c_products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: calc(100vh);
+
+    flex-direction: column;
+
+    .product{
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow:  0 0 7px #12121245;
+
+        font-family: Poppins;
+    }
+}

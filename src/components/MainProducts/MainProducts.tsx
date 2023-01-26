@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { useEffect, useState } from "react"
 import Stars from "../MenuCategories/Stars/Stars"
 import styles from "./MainProducts.module.scss"
@@ -22,6 +23,7 @@ function MainProducts() {
                 {
                     products.map(p => {
                         return (
+                            <Link href={`/products/${p.id}`} key={p.id}>
                             <div className={styles.product}>
                                 <div className={styles.c_img}>
                                     <img src={p.img} alt="" />
@@ -45,6 +47,7 @@ function MainProducts() {
                                     </p>
                                 </div>
                             </div>
+                            </Link>
                         )
                     })
                 }
