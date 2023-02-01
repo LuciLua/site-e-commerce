@@ -22,7 +22,7 @@ function MainProducts() {
     function fetchProducts() {
         axios.get('/api/utils/findAllProduct')
             .then(resp => resp.data )
-            .then(resp =>  setProducts([resp]) )
+            .then(resp =>  setProducts(resp) )
             .then(resp =>  console.log(resp))
     }
 
