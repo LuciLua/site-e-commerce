@@ -23,6 +23,7 @@ function Header() {
                 <li><Link onClick={() => toggleMenu()} href="/about">Sobre</Link></li>
                 <li><Link onClick={() => toggleMenu()} href="/sorvetes">Sorvetes</Link></li>
                 <li><Link onClick={() => toggleMenu()} href="/contact">Contato</Link></li>
+                <li><Link onClick={() => toggleMenu()} href="/admin">Admin</Link></li>
             </ul>
             <ul className={styles.menu_ul_r}>
                 <li id="carrinho">

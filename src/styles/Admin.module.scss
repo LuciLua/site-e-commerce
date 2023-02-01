@@ -1,0 +1,17 @@
+.form{
+    margin: auto;    
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 40px;
+
+    input, button{
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+    }
+}
