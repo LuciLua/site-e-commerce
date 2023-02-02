@@ -21,9 +21,29 @@ function MainProducts() {
 
     function fetchProducts() {
         axios.get('/api/utils/findAllProduct')
-            .then(resp => resp.data )
-            .then(resp =>  setProducts(resp) )
-            .then(resp =>  console.log(resp))
+            .then(resp => resp.data)
+            .then(resp => setProducts(resp))
+            .then(resp => console.log(resp))
+    }
+
+    function convertToInt(price: String) {
+
+        let newPrice: any = Number(price)
+
+        // newPrice = newPrice.toFixed(0).toPrecision()
+        newPrice = Math.floor(newPrice)
+        newPrice = newPrice.toPrecision(2)
+
+        return newPrice
+
+    }
+    function convertToCent(price: String) {
+        // let newPrice = price
+        let newPrice: any = Number(price)
+
+        newPrice = newPrice.toFixed(2).slice(-2)
+
+        return newPrice
     }
 
     return (
@@ -44,15 +64,18 @@ function MainProducts() {
                                         </p>
                                         <div className={styles.stars}>
                                             <Stars howManyStars={p.stars} />
+                                            {p.stars}
                                         </div>
                                         <p className={styles.price}>
                                             <span className={styles.cifrao}>R$</span>
-                                            {/* <span className={styles.int}>
-                                                {(p.price).toFixed(0)}
+                                            <span className={styles.int}>
+                                                {/* {(p.price).toFixed(0)} */}
+                                                {convertToInt(p.price)}
                                             </span>
                                             <span className={styles.end}>
-                                                {(p.price).toFixed(2).slice(-2)}
-                                            </span> */}
+                                                {/* {(p.price).toFixed(2).slice(-2)} */}
+                                                {convertToCent(p.price)}
+                                            </span>
                                         </p>
                                     </div>
                                 </div>
