@@ -1,10 +1,14 @@
+import axios from "axios"
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import styles from "../../styles/products/product.module.scss"
 
 type ProductProps = {
-    id: number,
-    name: String,
-    price: number
+    _id: String,
+    name?: String,
+    price?: number
+    stars?: any
+    img?: string
 }
 
 function Product() {
@@ -14,33 +18,41 @@ function Product() {
         fetchProductsById()
     }, [])
 
-    
-    function getIdbyPath(){
-        const url = window.location.pathname
-        var finalPathId:any = url.slice(10)
-        let id = finalPathId - 1
-        return id
+
+    async function getIdbyPath() {
+        const url = await window.location.pathname
+        var finalPathId = await url.slice(10)
+        finalPathId = decodeURI(finalPathId)
+
+        await axios.post('/api/utils/findOneProduct', { name: finalPathId })
+            // await axios.post('/api/utils/findOneProduct', { name: "sorveteLoco" })
+            .then(resp => resp.data)
+            .then(resp => setProduct({ ...product, ...resp }))
+
+        return product
     }
 
     async function fetchProductsById() {
-        const id = getIdbyPath()
-        await fetch('/data/products.json')
-            .then(resp => resp.json())
-            .then(resp => resp.products[id])
-            .then(resp => setProduct(resp))
-            
+
+        const id: any = await getIdbyPath()
+        console.log(id)
+        return id.name
     }
 
 
     return (
         <>
-        <div className={styles.c_products}>
-            <div className={styles.product}>
-            <p>product id: {product.id}</p>
-            <p>product name: {product.name}</p>
-            <p>product price: {product.price}</p>
+            <div className={styles.c_products}>
+                <div className={styles.product}>
+                    <p>product id: {product._id}</p>
+                    <p>product name: {product.name}</p>
+                    <p>product price: {product.price}</p>
+                    <p>product stars: {product.stars}</p>
+                    <div>
+                        <Image src={product.img} fill={true} alt={`${product.name}`} />
+                    </div>
+                </div>
             </div>
-        </div>
         </>
     )
 }

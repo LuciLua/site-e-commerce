@@ -13,5 +13,17 @@
         padding: 10px;
         border-radius: 10px;
         border: none;
+        outline: none;
+    }
+
+    button{
+        cursor: pointer;
+        background-color: rgb(28, 27, 27);
+        color: #fff;
+        width: 200px;
+
+        &:hover{
+            background-color: #121212;
+        }
     }
 }

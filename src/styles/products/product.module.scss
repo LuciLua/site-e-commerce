@@ -13,5 +13,14 @@
         box-shadow:  0 0 7px #12121245;
 
         font-family: Poppins;
+
+        div{
+            height: 40vh;
+            overflow: hidden;
+            position: relative;
+            img{
+                object-fit: contain;
+            }
+        }
     }
 }
