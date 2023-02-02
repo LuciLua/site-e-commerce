@@ -4,33 +4,23 @@ import { useEffect, useState } from "react"
 import Stars from "../MenuCategories/Stars/Stars"
 import styles from "./MainProducts.module.scss"
 
-function MainProducts() {
+function MainProducts({ dataProducts }) {
 
     const [products, setProducts] = useState([])
+
 
     useEffect(() => {
         fetchProducts()
     }, [])
 
-    // function fetchProducts() {
-    //     fetch('/data/products.json')
-    //         .then(resp => resp.json())
-    //         .then(resp => resp.products)
-    //         .then(resp => setProducts(resp))
-    // }
-
     function fetchProducts() {
-        axios.get('/api/utils/findAllProduct')
-            .then(resp => resp.data)
-            .then(resp => setProducts(resp))
-            .then(resp => console.log(resp))
+        setProducts(dataProducts)
     }
 
     function convertToInt(price: String) {
 
         let newPrice: any = Number(price)
 
-        // newPrice = newPrice.toFixed(0).toPrecision()
         newPrice = Math.floor(newPrice)
         newPrice = newPrice.toPrecision(2)
 
@@ -38,7 +28,6 @@ function MainProducts() {
 
     }
     function convertToCent(price: String) {
-        // let newPrice = price
         let newPrice: any = Number(price)
 
         newPrice = newPrice.toFixed(2).slice(-2)
@@ -69,11 +58,9 @@ function MainProducts() {
                                         <p className={styles.price}>
                                             <span className={styles.cifrao}>R$</span>
                                             <span className={styles.int}>
-                                                {/* {(p.price).toFixed(0)} */}
                                                 {convertToInt(p.price)}
                                             </span>
                                             <span className={styles.end}>
-                                                {/* {(p.price).toFixed(2).slice(-2)} */}
                                                 {convertToCent(p.price)}
                                             </span>
                                         </p>
