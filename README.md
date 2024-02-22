@@ -3,11 +3,14 @@
 
 ## Tools
 
+### Frontend
+
 - ReactJs
 - NextJs
 - Sass
 
-Backend
+### Backend
+
 - mongoDB
 - mySQL
 - axios
